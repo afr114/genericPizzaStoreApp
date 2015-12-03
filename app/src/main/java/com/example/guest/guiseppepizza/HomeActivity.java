@@ -1,0 +1,53 @@
+package com.example.guest.guiseppepizza;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+public class HomeActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+
+        final TextView phoneText = (TextView) findViewById(R.id.phoneTextView);
+        final TextView mapText = (TextView) findViewById(R.id.mapTextView);
+        final TextView friendText = (TextView) findViewById(R.id.friendTextView);
+        phoneText.setOnClickListener(phoneListener);
+        mapText.setOnClickListener(mapListener);
+        friendText.setOnClickListener(friendListener);
+
+    }
+
+    private View.OnClickListener phoneListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Uri number = Uri.parse("tel:555-7777");
+            Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+            startActivity(callIntent);
+        }
+    };
+
+    private View.OnClickListener mapListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Uri location = Uri.parse("geo:0,0?q=Giuseppes+Pizza+and+Pasta+Restaurant");
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+            startActivity(mapIntent);
+        }
+    };
+
+    private View.OnClickListener friendListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Uri uri = Uri.parse("smsto:");
+            Intent friendIntent = new Intent(Intent.ACTION_SENDTO, uri);
+            friendIntent.putExtra("sms_body", "I love Guiseppe's Pizza! ;)");
+            startActivity(friendIntent);
+        }
+    };
+}
