@@ -52,7 +52,7 @@
                 android:id="@+id/textView2"
                 android:textColor="#af2121"
                 android:textSize="@dimen/clickable_text"
-                android:paddingTop="5dp"
+                android:paddingTop="2dp"
                 android:paddingLeft="10dp"
                 android:clickable="true"
                 android:gravity="center_vertical" />
@@ -79,7 +79,7 @@
                 android:id="@+id/phoneTextView"
                 android:textColor="#af2121"
                 android:textSize="@dimen/clickable_text"
-                android:paddingTop="5dp"
+                android:paddingTop="2dp"
                 android:paddingLeft="10dp"
                 android:clickable="true"
                 android:gravity="center_vertical" />
@@ -105,11 +105,37 @@
                 android:id="@+id/mapTextView"
                 android:textColor="#af2121"
                 android:textSize="@dimen/clickable_text"
-                android:paddingTop="5dp"
+                android:paddingTop="2dp"
                 android:paddingLeft="10dp"
                 android:clickable="true"
                 android:gravity="center_vertical" />
         </TableRow>
+
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:layout_column="2"
+            android:src="@drawable/text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Text Friend"
+            android:id="@+id/friendTextView"
+            android:textColor="#af2121"
+            android:textSize="@dimen/clickable_text"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:clickable="true"
+            android:gravity="center_vertical" />
+    </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -120,18 +146,18 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView5"
+                android:id="@+id/imageView6"
                 android:layout_column="2"
-                android:src="@drawable/text"/>
+                android:src="@drawable/photo"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Text Friend"
-                android:id="@+id/friendTextView"
+                android:text="Take photo"
+                android:id="@+id/photoTextView"
                 android:textColor="#af2121"
                 android:textSize="@dimen/clickable_text"
-                android:paddingTop="5dp"
+                android:paddingTop="2dp"
                 android:paddingLeft="10dp"
                 android:clickable="true"
                 android:gravity="center_vertical" />

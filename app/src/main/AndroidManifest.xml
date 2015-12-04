@@ -3,6 +3,8 @@
     package="com.example.guest.guiseppepizza" >
 
     <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
 
 
     <application
